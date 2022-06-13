@@ -8,11 +8,11 @@
 
 
 # Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
-path: ../datasets/istanbul  # dataset root dir
+path: ../datasets/city  # dataset root dir
 train: images/train1  # train images (relative to 'path') 128 images
 val: images/vals  # val images (relative to 'path') 128 images
 test:  # test images (optional)
 
 # Classes
-nc: 29  # number of classes
-names: ['ayaIriniKilisesi', 'galataKulesi', 'ayaTriadaRumOrtadoks', 'ayaYorgiRumPatrikhane', 'aynaliKavakKasri', 'beykozMecidiyeKasri', 'beylerbeyiSarayi', 'bulgarOrtodoksKilisesi', 'buyukadaAyaYorgi', 'fenerRumErkekLisesi', 'ihlamurKasirlari', 'kirimKilisesi', 'ocakliAdaKalesi', 'sentAntuanKilisesi', 'sepetcilerKasri', 'suKemeri', 'suleymaniyeCamii', 'sultanahmetCamii', 'tekfurSarayi', 'topkapiSarayi', 'yildizSarayi', 'ayasofyaCamii', 'bozdoganSuKemeri', 'kucuksuKasri', 'maslakKasirlari', 'yorosKalesi', 'haydarpasa', 'dolmabahceSarayi', 'kizKulesi']
+nc: 43  # number of classes
+names: ['galataKulesi', 'ayaIriniKilisesi', 'ayaTriadaRumOrtadoks', 'ayaYorgiRumPatrikhane', 'aynaliKavakKasri', 'beykozMecidiyeKasri', 'beylerbeyiSarayi', 'bulgarOrtodoksKilisesi', 'buyukadaAyaYorgi', 'fenerRumErkekLisesi', 'ihlamurKasirlari', 'kirimKilisesi', 'ocakliAdaKalesi', 'sentAntuanKilisesi', 'sepetcilerKasri', 'suKemeri', 'suleymaniyeCamii', 'sultanahmetCamii', 'tekfurSarayi', 'topkapiSarayi', 'yildizSarayi', 'ayasofyaCamii', 'bozdoganSuKemeri', 'kucuksuKasri', 'maslakKasirlari', 'yorosKalesi', 'haydarpasa', 'dolmabahceSarayi', 'kizKulesi', 'anadoluHisari', 'AhridaSinagogu', 'BinbirdirekSarnici', 'FloryaAtaturkDenizKosku', 'GalataMevlihanesi', 'HarbiyeAskeriMuzesi', 'HasekiHamami', 'HidivKasri', 'LaleliTashan', 'RivaKalesi', 'TarihiSuleymaniyeHamami', 'YerebatanSarnici', 'CiraganSarayi', 'IstanbulArkeolojiMuzesi']
