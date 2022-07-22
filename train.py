@@ -1,12 +1,10 @@
 # YOLOv5 🚀 by Ultralytics, GPL-3.0 license
 """
 Train a YOLOv5 model on a custom dataset.
-
 Models and datasets download automatically from the latest YOLOv5 release.
 Models: https://github.com/ultralytics/yolov5/tree/master/models
 Datasets: https://github.com/ultralytics/yolov5/tree/master/data
 Tutorial: https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
-
 Usage:
     $ python path/to/train.py --data coco128.yaml --weights yolov5s.pt --img 640  # from pretrained (RECOMMENDED)
     $ python path/to/train.py --data coco128.yaml --weights '' --cfg yolov5s.yaml --img 640  # from scratch
@@ -21,7 +19,7 @@ import time
 from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
-
+from google.colab import files
 import numpy as np
 import torch
 import torch.distributed as dist
@@ -423,6 +421,8 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
                 torch.save(ckpt, last)
                 if best_fitness == fi:
                     torch.save(ckpt, best)
+                    if epoch%5==0 and epoch>0:
+                        files.download(best)
                 if opt.save_period > 0 and epoch % opt.save_period == 0:
                     torch.save(ckpt, w / f'epoch{epoch}.pt')
                 del ckpt
